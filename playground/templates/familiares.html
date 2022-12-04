@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Familiares</title>
+
+    <style type="text/css">
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 800px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Familiares registrados:</h1>
+    <table>
+        <tr>
+          <th>Nombre</th>
+          <th>Edad</th>
+          <th>Parentezco</th>
+        </tr>
+        {% for familiar in familiares %}
+        <tr>
+            <td>{{ familiar.name }}</td>
+            <td>{{ familiar.age }}</td>
+            <td>{{ familiar.relationship }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    <!-- <form action="{% url 'familiaresView' %}" method="POST">
+        {% csrf_token %}
+        <label>Nombre:</label>
+        <input type="text" name="name">
+        <label>Edad:</label>
+        <input type="number" name="age">
+        <label>Genero:</label>
+        <input type="text" name="gender">
+        <label>Relacion:</label>
+        <input type="text" name="relationship">
+        <button type="submit">Enviar</button>
+    </form> -->
+</body>
+</html>
