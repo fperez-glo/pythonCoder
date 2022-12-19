@@ -15,9 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from playground.views import renderFamiliares
+from playground.views import renderMascotas
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', renderFamiliares, name='familiaresView'),
+    path('home/', renderMascotas, name='familiaresView'),
 ]
